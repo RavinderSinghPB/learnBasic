@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice - WebDevBasics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">WebDevBasics</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+                <li><a href="html-basics.html" class="hover:text-indigo-600">HTML</a></li>
+                <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
+                <li><a href="js-basics.html" class="hover:text-indigo-600">JavaScript</a></li>
+                <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+                <li><a href="js-practice.html" class="text-indigo-600 hover:text-indigo-800">JS Practice</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">JavaScript Practice Exercises</h1>
+            <p class="text-lg text-gray-600 mb-8 text-center">Practice your JavaScript skills with these interactive exercises.</p>
+
+            <!-- Exercise 1: Counter -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 1: Interactive Counter</h2>
+                <p class="text-gray-600 mb-4">Create a counter that can be incremented and decremented with buttons.</p>
+
+                <div class="bg-gray-100 p-6 rounded-md mb-6">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <button id="decrement" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors">-</button>
+                        <span id="counter" class="text-2xl font-bold">0</span>
+                        <button id="increment" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">+</button>
+                    </div>
+                    <div class="text-center">
+                        <button id="reset-counter" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors">Reset</button>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Your Task:</p>
+                    <p>Complete the counter functionality in the JavaScript file. The counter should:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>Increment when the + button is clicked</li>
+                        <li>Decrement when the - button is clicked</li>
+                        <li>Reset to 0 when the Reset button is clicked</li>
+                        <li>Not go below 0</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                    <pre class="text-sm"><code>// Get the elements
+const counter = document.getElementById('counter');
+const incrementBtn = document.getElementById('increment');
+const decrementBtn = document.getElementById('decrement');
+const resetBtn = document.getElementById('reset-counter');
+
+// Add your code here</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercise 2: To-Do List -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 2: To-Do List</h2>
+                <p class="text-gray-600 mb-4">Create a simple to-do list where you can add and remove tasks.</p>
+
+                <div class="bg-gray-100 p-6 rounded-md mb-6">
+                    <div class="flex space-x-4 mb-4">
+                        <input type="text" id="todo-input" placeholder="Enter a new task" class="flex-1 px-4 py-2 border rounded-md">
+                        <button id="add-todo" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">Add Task</button>
+                    </div>
+                    <ul id="todo-list" class="space-y-2"></ul>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Your Task:</p>
+                    <p>Complete the to-do list functionality in the JavaScript file. The list should:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>Add new tasks when the Add Task button is clicked</li>
+                        <li>Remove tasks when their delete button is clicked</li>
+                        <li>Clear the input field after adding a task</li>
+                        <li>Not add empty tasks</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                    <pre class="text-sm"><code>// Get the elements
+const todoInput = document.getElementById('todo-input');
+const addTodoBtn = document.getElementById('add-todo');
+const todoList = document.getElementById('todo-list');
+
+// Add your code here</code></pre>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4 mb-4">
+                    <p class="font-bold">Fill in the blank:</p>
+                    <p>To add an event listener to a button that runs a function when clicked, write: <code>addTodoBtn._______(_______, function() { /* code here */ });</code></p>
+                </div>
+            </div>
+
+            <!-- Exercise 3: Form Validation -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 3: Form Validation</h2>
+                <p class="text-gray-600 mb-4">Create a form with validation for name, email, and password fields.</p>
+
+                <div class="bg-gray-100 p-6 rounded-md mb-6">
+                    <form id="validation-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" class="mt-1 block w-full px-4 py-2 border rounded-md">
+                            <p id="name-error" class="mt-1 text-sm text-red-600 hidden"></p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" class="mt-1 block w-full px-4 py-2 border rounded-md">
+                            <p id="email-error" class="mt-1 text-sm text-red-600 hidden"></p>
+                        </div>
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                            <input type="password" id="password" class="mt-1 block w-full px-4 py-2 border rounded-md">
+                            <p id="password-error" class="mt-1 text-sm text-red-600 hidden"></p>
+                        </div>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors">Submit</button>
+                    </form>
+                    <div id="success-message" class="mt-4 text-green-600 hidden"></div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Your Task:</p>
+                    <p>Complete the form validation in the JavaScript file. The form should:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>Validate that the name is not empty</li>
+                        <li>Validate that the email contains an @ symbol</li>
+                        <li>Validate that the password is at least 8 characters</li>
+                        <li>Show error messages under each field when validation fails</li>
+                        <li>Show a success message when all validations pass</li>
+                        <li>Prevent form submission if validation fails</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                    <pre class="text-sm"><code>// Get the elements
+const form = document.getElementById('validation-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const passwordError = document.getElementById('password-error');
+const successMessage = document.getElementById('success-message');
+
+// Add your code here</code></pre>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4 mb-4">
+                    <p class="font-bold">Fill in the blank:</p>
+                    <p>To prevent a form from submitting by default, use <code>event._______();</code> inside the form's submit event handler.</p>
+                    <p class="mt-2">To check if an email contains an @ symbol, use: <code>emailInput.value.______('@')</code></p>
+                </div>
+            </div>
+
+            <!-- Exercise 4: Color Picker -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 4: Color Picker</h2>
+                <p class="text-gray-600 mb-4">Create a color picker that changes the background color of an element.</p>
+
+                <div class="bg-gray-100 p-6 rounded-md mb-6">
+                    <div class="flex space-x-4 mb-4">
+                        <input type="color" id="color-picker" class="w-20 h-10">
+                        <button id="apply-color" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors">Apply Color</button>
+                    </div>
+                    <div id="color-box" class="w-full h-32 border rounded-md"></div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Your Task:</p>
+                    <p>Complete the color picker functionality in the JavaScript file. The color picker should:</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>Change the background color of the box when Apply Color is clicked</li>
+                        <li>Show the current color value</li>
+                        <li>Allow direct color selection from the color input</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                    <pre class="text-sm"><code>// Get the elements
+const colorPicker = document.getElementById('color-picker');
+const applyColorBtn = document.getElementById('apply-color');
+const colorBox = document.getElementById('color-box');
+
+// Add your code here</code></pre>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4 mb-4">
+                    <p class="font-bold">Fill in the blank:</p>
+                    <p>To change the background color of an element, use: <code>colorBox.style._______ = colorPicker.value;</code></p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="js-basics.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-block">Back to JavaScript Basics</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-center">Created to help beginners learn web development. Explore, modify, and have fun!</p>
+            <p class="text-center mt-2">Open the files in your code editor and try changing things to see what happens.</p>
+        </div>
+    </footer>
+
+    <script src="js/practice.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practice - WebDevBasics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">WebDevBasics</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+                <li><a href="html-basics.html" class="hover:text-indigo-600">HTML</a></li>
+                <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
+                <li><a href="js-basics.html" class="hover:text-indigo-600">JavaScript</a></li>
+                <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+                <li><a href="html-practice.html" class="text-indigo-600 hover:text-indigo-800">HTML Practice</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">HTML Practice Exercises</h1>
+            <p class="text-lg text-gray-600 mb-8 text-center">Test your HTML knowledge with these exercises.</p>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 1: Basic Structure</h2>
+                <p class="text-gray-600 mb-4">Create a basic HTML structure with a title, heading, paragraph, and an image.</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="font-medium">Complete this HTML document:</p>
+                    <pre class="text-sm"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;___________&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;_____&gt;My First Webpage&lt;/_____&gt;
+    &lt;_____&gt;This is a paragraph about my favorite hobby.&lt;/_____&gt;
+    &lt;_____ src="image.jpg" alt="My hobby"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="bg-indigo-50 p-4 rounded-md mb-6 border-l-4 border-indigo-500">
+                    <p class="font-medium">Solution:</p>
+                    <pre class="text-sm"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First Webpage&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph about my favorite hobby.&lt;/p&gt;
+    &lt;img src="image.jpg" alt="My hobby"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 2: Links and Lists</h2>
+                <p class="text-gray-600 mb-4">Create a navigation menu with links and an unordered list.</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="font-medium">Fill in the blanks:</p>
+                    <pre class="text-sm"><code>&lt;nav&gt;
+    &lt;_____&gt;
+        &lt;_____&gt;&lt;a _____="index.html"&gt;Home&lt;/a&gt;&lt;/_____&gt;
+        &lt;_____&gt;&lt;a _____="about.html"&gt;About&lt;/a&gt;&lt;/_____&gt;
+        &lt;_____&gt;&lt;a _____="contact.html"&gt;Contact&lt;/a&gt;&lt;/_____&gt;
+    &lt;/_____&gt;
+&lt;/nav&gt;</code></pre>
+                </div>
+
+                <div class="bg-indigo-50 p-4 rounded-md mb-6 border-l-4 border-indigo-500">
+                    <p class="font-medium">Solution:</p>
+                    <pre class="text-sm"><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 3: Tables</h2>
+                <p class="text-gray-600 mb-4">Create a simple table with headers and data.</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="font-medium">Complete this table:</p>
+                    <pre class="text-sm"><code>&lt;_____&gt;
+    &lt;_____&gt;
+        &lt;tr&gt;
+            &lt;_____&gt;Name&lt;/_____&gt;
+            &lt;_____&gt;Age&lt;/_____&gt;
+            &lt;_____&gt;Country&lt;/_____&gt;
+        &lt;/tr&gt;
+    &lt;/_____&gt;
+    &lt;_____&gt;
+        &lt;tr&gt;
+            &lt;_____&gt;John&lt;/_____&gt;
+            &lt;_____&gt;25&lt;/_____&gt;
+            &lt;_____&gt;USA&lt;/_____&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;_____&gt;Maria&lt;/_____&gt;
+            &lt;_____&gt;30&lt;/_____&gt;
+            &lt;_____&gt;Spain&lt;/_____&gt;
+        &lt;/tr&gt;
+    &lt;/_____&gt;
+&lt;/_____&gt;</code></pre>
+                </div>
+
+                <div class="bg-indigo-50 p-4 rounded-md mb-6 border-l-4 border-indigo-500">
+                    <p class="font-medium">Solution:</p>
+                    <pre class="text-sm"><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+            &lt;th&gt;Country&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;USA&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Maria&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;Spain&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-center">Created to help beginners learn web development. Explore, modify, and have fun!</p>
+            <p class="text-center mt-2">Open the files in your code editor and try changing things to see what happens.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

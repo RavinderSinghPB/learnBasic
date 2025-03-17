@@ -17,6 +17,7 @@
                 <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
                 <li><a href="js-basics.html" class="hover:text-indigo-600">JavaScript</a></li>
                 <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+                <li><a href="html-practice.html" class="hover:text-indigo-600">HTML Practice</a></li>
             </ul>
         </nav>
     </header>
@@ -50,6 +51,11 @@
                     <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;title&gt;</code> - Specifies a title for the page</li>
                     <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;body&gt;</code> - Contains the visible page content</li>
                 </ul>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Quick Check:</p>
+                    <p>What element contains all the content that is visible to users?</p>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
@@ -63,6 +69,16 @@
                         <h2 class="text-2xl font-bold">This is an h2 heading</h2>
                         <h3 class="text-xl font-bold">This is an h3 heading</h3>
                     </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-3">
+                        <p class="font-bold">Quick Check:</p>
+                        <p>Which heading tag should be used for the main title of a page?</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-3">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To create a main heading, use <code>&lt;_______&gt;Main Title&lt;/_______&gt;</code>.</p>
+                    </div>
                 </div>
 
                 <div class="mb-6">
@@ -70,6 +86,11 @@
                     <p class="text-gray-600 mb-3">The <code>&lt;p&gt;</code> element defines a paragraph:</p>
                     <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
                         <p>This is a paragraph of text. HTML paragraphs are defined with the p tag.</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-3">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To create a paragraph of text, wrap your content in <code>&lt;_______&gt;</code> and <code>&lt;/_______&gt;</code> tags.</p>
                     </div>
                 </div>
 
@@ -80,6 +101,16 @@
                         <a href="#" class="text-blue-500 hover:text-blue-700">This is a link</a>
                     </div>
                     <p class="text-gray-600 mt-2">HTML code: <code>&lt;a href="url"&gt;link text&lt;/a&gt;</code></p>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-3">
+                        <p class="font-bold">Try It:</p>
+                        <p>What attribute in the anchor tag specifies where the link should go?</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-3">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To create a link to Google, write: <code>&lt;a _______="https://www.google.com"&gt;Go to Google&lt;/a&gt;</code></p>
+                    </div>
                 </div>
 
                 <div class="mb-6">
@@ -87,6 +118,11 @@
                     <p class="text-gray-600 mb-3">The <code>&lt;img&gt;</code> element is used to embed images:</p>
                     <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
                         <p>HTML code: <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code></p>
+                    </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-3">
+                        <p class="font-bold">Quick Check:</p>
+                        <p>What is the purpose of the "alt" attribute in an image tag?</p>
                     </div>
                 </div>
 
@@ -111,6 +147,84 @@
                             </ol>
                         </div>
                     </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-3">
+                        <p class="font-bold">Quick Check:</p>
+                        <p>When would you use an ordered list versus an unordered list?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Forms</h2>
+                <p class="text-gray-600 mb-4">Forms are used to collect user input:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6 overflow-x-auto">
+                    <pre class="text-sm"><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+
+                <p class="text-gray-600 mb-4">Common input types:</p>
+                <ul class="list-disc pl-5 text-gray-600 mb-4">
+                    <li><code>text</code> - A single-line text field</li>
+                    <li><code>email</code> - An email field with validation</li>
+                    <li><code>password</code> - A password field that masks input</li>
+                    <li><code>checkbox</code> - A checkbox for multiple selections</li>
+                    <li><code>radio</code> - Radio buttons for single selection</li>
+                    <li><code>submit</code> - A button to submit the form</li>
+                </ul>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Quick Check:</p>
+                    <p>What input type would you use for a field where users should enter a secret password?</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Practice Problems</h2>
+                <p class="text-gray-600 mb-4">Let's apply what we've learned with these step-by-step exercises:</p>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Exercise 1: Create a simple webpage</h3>
+                    <ol class="list-decimal pl-5 text-gray-600">
+                        <li>Create a new HTML file named "my-first-page.html"</li>
+                        <li>Add the basic HTML structure (DOCTYPE, html, head, body)</li>
+                        <li>Set the title to "My First Webpage"</li>
+                        <li>Add an h1 heading that says "Welcome to My Webpage"</li>
+                        <li>Add a paragraph introducing yourself</li>
+                    </ol>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Exercise 2: Working with links and images</h3>
+                    <ol class="list-decimal pl-5 text-gray-600">
+                        <li>Create a new HTML file named "links-and-images.html"</li>
+                        <li>Add the basic HTML structure</li>
+                        <li>Create a navigation section with links to at least three websites you visit often</li>
+                        <li>Add an image below the navigation (you can use an online image URL)</li>
+                        <li>Add a caption for the image using a paragraph tag</li>
+                    </ol>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Exercise 3: Create a simple form</h3>
+                    <ol class="list-decimal pl-5 text-gray-600">
+                        <li>Create a new HTML file named "simple-form.html"</li>
+                        <li>Add a form with the following fields:</li>
+                        <li>Name (text input)</li>
+                        <li>Email (email input)</li>
+                        <li>Age (number input)</li>
+                        <li>A dropdown for favorite color with at least 4 options</li>
+                        <li>A textarea for additional comments</li>
+                        <li>A submit button labeled "Send Form"</li>
+                    </ol>
                 </div>
             </div>
 
@@ -135,6 +249,7 @@
             </div>
 
             <div class="text-center">
+                <a href="html-practice.html" class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors inline-block mr-4">HTML Practice Exercises</a>
                 <a href="tailwind-basics.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-block">Next: Learn Tailwind CSS →</a>
             </div>
         </div>

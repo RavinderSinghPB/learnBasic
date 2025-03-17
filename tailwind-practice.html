@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Practice - WebDevBasics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">WebDevBasics</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+                <li><a href="html-basics.html" class="hover:text-indigo-600">HTML</a></li>
+                <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
+                <li><a href="js-basics.html" class="hover:text-indigo-600">JavaScript</a></li>
+                <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+                <li><a href="tailwind-practice.html" class="text-indigo-600 hover:text-indigo-800">Tailwind Practice</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Tailwind CSS Practice Exercises</h1>
+            <p class="text-lg text-gray-600 mb-8 text-center">Test your Tailwind CSS knowledge with these exercises.</p>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 1: Basic Styling</h2>
+                <p class="text-gray-600 mb-4">Apply Tailwind classes to style the following elements:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="font-medium">Add Tailwind classes to create:</p>
+                    <pre class="text-sm"><code>&lt;div class="_________"&gt;
+    &lt;h2 class="_________"&gt;Welcome to Tailwind&lt;/h2&gt;
+    &lt;p class="_________"&gt;This is a paragraph with tailwind styling.&lt;/p&gt;
+    &lt;button class="_________"&gt;Click Me&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    <p class="mt-4">Requirements:</p>
+                    <ul class="list-disc pl-5">
+                        <li>The div should have padding, rounded corners, and a light gray background</li>
+                        <li>The heading should be blue, large, and bold</li>
+                        <li>The paragraph should have proper spacing and medium gray color</li>
+                        <li>The button should be blue with rounded corners, white text, padding, and hover effect</li>
+                    </ul>
+                </div>
+
+                <div class="bg-indigo-50 p-4 rounded-md mb-6 border-l-4 border-indigo-500">
+                    <p class="font-medium">Solution:</p>
+                    <pre class="text-sm"><code>&lt;div class="bg-gray-100 p-6 rounded-lg"&gt;
+    &lt;h2 class="text-blue-600 text-2xl font-bold mb-4"&gt;Welcome to Tailwind&lt;/h2&gt;
+    &lt;p class="text-gray-600 mb-6"&gt;This is a paragraph with tailwind styling.&lt;/p&gt;
+    &lt;button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"&gt;Click Me&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 2: Responsive Layout</h2>
+                <p class="text-gray-600 mb-4">Create a responsive grid layout with Tailwind:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="font-medium">Add Tailwind classes for a responsive 3-column layout that stacks on mobile:</p>
+                    <pre class="text-sm"><code>&lt;div class="_________"&gt;
+    &lt;div class="_________"&gt;Column 1&lt;/div&gt;
+    &lt;div class="_________"&gt;Column 2&lt;/div&gt;
+    &lt;div class="_________"&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="bg-indigo-50 p-4 rounded-md mb-6 border-l-4 border-indigo-500">
+                    <p class="font-medium">Solution:</p>
+                    <pre class="text-sm"><code>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-4"&gt;
+    &lt;div class="bg-blue-100 p-4 rounded"&gt;Column 1&lt;/div&gt;
+    &lt;div class="bg-blue-100 p-4 rounded"&gt;Column 2&lt;/div&gt;
+    &lt;div class="bg-blue-100 p-4 rounded"&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Exercise 3: Card Component</h2>
+                <p class="text-gray-600 mb-4">Style a card component with Tailwind CSS:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="font-medium">Add Tailwind classes to create a product card:</p>
+                    <pre class="text-sm"><code>&lt;div class="_________"&gt;
+    &lt;img src="product.jpg" alt="Product" class="_________"&gt;
+    &lt;div class="_________"&gt;
+        &lt;h3 class="_________"&gt;Product Name&lt;/h3&gt;
+        &lt;p class="_________"&gt;Product description goes here&lt;/p&gt;
+        &lt;div class="_________"&gt;
+            &lt;span class="_________"&gt;$99.99&lt;/span&gt;
+            &lt;button class="_________"&gt;Add to Cart&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="bg-indigo-50 p-4 rounded-md mb-6 border-l-4 border-indigo-500">
+                    <p class="font-medium">Solution:</p>
+                    <pre class="text-sm"><code>&lt;div class="bg-white rounded-lg shadow-lg overflow-hidden"&gt;
+    &lt;img src="product.jpg" alt="Product" class="w-full h-48 object-cover"&gt;
+    &lt;div class="p-4"&gt;
+        &lt;h3 class="text-xl font-bold text-gray-800 mb-2"&gt;Product Name&lt;/h3&gt;
+        &lt;p class="text-gray-600 mb-4"&gt;Product description goes here&lt;/p&gt;
+        &lt;div class="flex justify-between items-center"&gt;
+            &lt;span class="text-lg font-bold text-gray-800"&gt;$99.99&lt;/span&gt;
+            &lt;button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded"&gt;Add to Cart&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-center">Created to help beginners learn web development. Explore, modify, and have fun!</p>
+            <p class="text-center mt-2">Open the files in your code editor and try changing things to see what happens.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

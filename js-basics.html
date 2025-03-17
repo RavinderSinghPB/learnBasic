@@ -17,6 +17,7 @@
                 <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
                 <li><a href="js-basics.html" class="text-indigo-600 hover:text-indigo-800">JavaScript</a></li>
                 <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+                <li><a href="js-practice.html" class="hover:text-indigo-600">JS Practice</a></li>
             </ul>
         </nav>
     </header>
@@ -38,6 +39,11 @@
                     <li>And much more!</li>
                 </ul>
                 <p class="text-gray-600">JavaScript works alongside HTML (structure) and CSS (styling) to create complete web experiences.</p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                    <p class="font-bold">Quick Check:</p>
+                    <p>What are the three core technologies of web development?</p>
+                </div>
             </div>
 
             <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
@@ -62,6 +68,16 @@ var country = "USA";</code></pre>
 
                     <button id="try-variables" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
                     <div id="variables-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                        <p class="font-bold">Try It:</p>
+                        <p>What's the difference between <code>let</code> and <code>const</code>? When would you use each?</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To declare a variable whose value will never change, use <code>_______</code>, and to declare a variable whose value might change later, use <code>_______</code>.</p>
+                    </div>
                 </div>
 
                 <div class="mb-8">
@@ -92,6 +108,16 @@ let person = {
 
                     <button id="try-datatypes" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
                     <div id="datatypes-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                        <p class="font-bold">Quick Check:</p>
+                        <p>What data type would you use to store a collection of user information with properties like name, email, and age?</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To store a list of items in JavaScript, you would use an <code>_______</code>, and to access the first item in this list, you would use <code>listName[_______]</code>.</p>
+                    </div>
                 </div>
 
                 <div class="mb-8">
@@ -117,6 +143,16 @@ const multiply = function(x, y) {
 
                     <button id="try-functions" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
                     <div id="functions-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                        <p class="font-bold">Try It:</p>
+                        <p>Write a function that takes a temperature in Celsius and returns the equivalent in Fahrenheit. The formula is: F = C × 9/5 + 32</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To declare an arrow function that adds two numbers, write: <code>const add = (_______) => { return _______ + _______; };</code></p>
+                    </div>
                 </div>
 
                 <div class="mb-8">
@@ -151,6 +187,79 @@ while (count < 3) {
 
                     <button id="try-control" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
                     <div id="control-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                        <p class="font-bold">Quick Check:</p>
+                        <p>When would you use a for loop versus a while loop?</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-4">
+                        <p class="font-bold">Fill in the blank:</p>
+                        <p>To create a for loop that iterates 5 times, write: <code>for (let i = 0; i < _______; i++) { }</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Arrays and Array Methods</h2>
+                <p class="text-gray-600 mb-4">Arrays are used to store multiple values in a single variable:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6 overflow-x-auto">
+                    <pre class="text-sm"><code>// Creating an array
+const fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+// Accessing elements (zero-indexed)
+console.log(fruits[0]); // Output: "Apple"
+console.log(fruits[2]); // Output: "Orange"
+
+// Common array methods
+fruits.push("Strawberry");    // Add to end
+fruits.pop();                 // Remove from end
+fruits.unshift("Kiwi");       // Add to beginning
+fruits.shift();               // Remove from beginning
+fruits.indexOf("Banana");     // Find index of an item
+fruits.slice(1, 3);           // Get portion of array
+fruits.splice(1, 1, "Grape"); // Remove and replace elements</code></pre>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Try It:</p>
+                    <p>How would you add "Peach" to the end of the fruits array and then remove the first fruit?</p>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                    <p class="font-bold">Fill in the blank:</p>
+                    <p>To add an element to the end of an array named <code>students</code>, use <code>students._______("Alice")</code>, and to remove the last element, use <code>students._______()</code>.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Modern Array Methods</h3>
+                <div class="bg-gray-100 p-4 rounded-md mb-6 overflow-x-auto">
+                    <pre class="text-sm"><code>const numbers = [1, 2, 3, 4, 5];
+
+// forEach - execute a function on each element
+numbers.forEach(number => console.log(number * 2));
+
+// map - create a new array by transforming each element
+const doubled = numbers.map(number => number * 2);
+// doubled is [2, 4, 6, 8, 10]
+
+// filter - create a new array with elements that pass a test
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+// evenNumbers is [2, 4]
+
+// reduce - reduce array to a single value
+const sum = numbers.reduce((total, number) => total + number, 0);
+// sum is 15</code></pre>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Quick Check:</p>
+                    <p>Which array method would you use to transform every element in an array into a different value?</p>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                    <p class="font-bold">Fill in the blank:</p>
+                    <p>To create a new array containing only even numbers from an existing array, use <code>numbers._______((num) => num % 2 === 0)</code>.</p>
                 </div>
             </div>
 
@@ -193,6 +302,96 @@ document.body.appendChild(newElement);</code></pre>
                         <button id="add-element" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">Add Element</button>
                         <button id="reset-demo" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors">Reset</button>
                     </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mt-4">
+                        <p class="font-bold">Try It:</p>
+                        <p>What's the difference between using <code>textContent</code> and <code>innerHTML</code> to change content?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Events and Event Handling</h2>
+                <p class="text-gray-600 mb-4">JavaScript can respond to user interactions through events:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6 overflow-x-auto">
+                    <pre class="text-sm"><code>// Adding event listeners
+const button = document.getElementById('myButton');
+
+// Method 1: addEventListener
+button.addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+
+// Method 2: Using event properties
+button.onclick = function() {
+  alert('Button was clicked!');
+};
+
+// Common events:
+// click - when an element is clicked
+// mouseover - when the mouse moves over an element
+// keydown - when a key is pressed
+// submit - when a form is submitted
+// load - when a page or image loads</code></pre>
+                </div>
+
+                <div class="p-6 border border-gray-300 rounded-md mb-4">
+                    <h3 class="text-xl font-bold mb-2">Try Events Here</h3>
+                    <button id="event-demo" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md transition-colors">Click Me</button>
+                    <div id="event-output" class="mt-4 text-gray-700"></div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+                    <p class="font-bold">Quick Check:</p>
+                    <p>What event would you listen for to validate a form just before it's submitted to the server?</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Step-by-Step Practice Exercises</h2>
+                <p class="text-gray-600 mb-4">Let's practice with these guided exercises:</p>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Exercise 1: Interactive Counter</h3>
+                    <ol class="list-decimal pl-5 text-gray-600">
+                        <li>Create a new HTML file with a counter display and two buttons</li>
+                        <li>Add a JavaScript section at the bottom of the page</li>
+                        <li>Create a variable to store the current count (starting at 0)</li>
+                        <li>Select the display element and buttons using DOM methods</li>
+                        <li>Add click event listeners to the buttons to increment and decrement the counter</li>
+                        <li>Update the display each time the count changes</li>
+                        <li>Add a limit so the counter can't go below 0</li>
+                    </ol>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Exercise 2: To-Do List</h3>
+                    <ol class="list-decimal pl-5 text-gray-600">
+                        <li>Create a new HTML file with an input, add button, and an empty list</li>
+                        <li>Add a JavaScript section at the bottom of the page</li>
+                        <li>Select the input, button, and list elements using DOM methods</li>
+                        <li>Add a click event listener to the button</li>
+                        <li>When clicked, create a new list item with the input text</li>
+                        <li>Add a delete button to each list item</li>
+                        <li>Make the delete button functional</li>
+                        <li>Clear the input after adding a task</li>
+                    </ol>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Exercise 3: Form Validation</h3>
+                    <ol class="list-decimal pl-5 text-gray-600">
+                        <li>Create a new HTML file with a simple form (name, email, password)</li>
+                        <li>Add a submit button and error display areas for each field</li>
+                        <li>Add a JavaScript section at the bottom of the page</li>
+                        <li>Add a submit event listener to the form</li>
+                        <li>Validate that the name field is not empty</li>
+                        <li>Validate that the email contains an @ symbol</li>
+                        <li>Validate that the password is at least 8 characters</li>
+                        <li>If any validation fails, prevent form submission and show errors</li>
+                        <li>If all validation passes, show a success message</li>
+                    </ol>
                 </div>
             </div>
 
@@ -217,6 +416,7 @@ document.body.appendChild(newElement);</code></pre>
             </div>
 
             <div class="text-center">
+                <a href="js-practice.html" class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors inline-block mr-4">JavaScript Practice Exercises</a>
                 <a href="project.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-block">Next: Mini Project →</a>
             </div>
         </div>
@@ -230,5 +430,12 @@ document.body.appendChild(newElement);</code></pre>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Event demo
+        document.getElementById('event-demo').addEventListener('click', function() {
+            const output = document.getElementById('event-output');
+            output.textContent = 'Button clicked at: ' + new Date().toLocaleTimeString();
+        });
+    </script>
 </body>
 </html>
