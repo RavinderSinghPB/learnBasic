@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics - WebDevBasics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">WebDevBasics</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+                <li><a href="html-basics.html" class="text-indigo-600 hover:text-indigo-800">HTML</a></li>
+                <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
+                <li><a href="js-basics.html" class="hover:text-indigo-600">JavaScript</a></li>
+                <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">HTML Basics</h1>
+            <p class="text-lg text-gray-600 mb-8 text-center">HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">HTML Document Structure</h2>
+                <p class="text-gray-600 mb-4">Every HTML document has a basic structure that includes the following elements:</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6 overflow-x-auto">
+                    <pre class="text-sm"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <ul class="list-disc pl-5 text-gray-600 mb-4">
+                    <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;!DOCTYPE html&gt;</code> - Declares that this is an HTML5 document</li>
+                    <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;html&gt;</code> - The root element of an HTML page</li>
+                    <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;head&gt;</code> - Contains meta information about the page</li>
+                    <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;title&gt;</code> - Specifies a title for the page</li>
+                    <li><code class="bg-gray-100 px-1 py-0.5 rounded">&lt;body&gt;</code> - Contains the visible page content</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Common HTML Elements</h2>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Headings</h3>
+                    <p class="text-gray-600 mb-3">HTML has six levels of headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>:</p>
+                    <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                        <h1 class="text-3xl font-bold">This is an h1 heading</h1>
+                        <h2 class="text-2xl font-bold">This is an h2 heading</h2>
+                        <h3 class="text-xl font-bold">This is an h3 heading</h3>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Paragraphs</h3>
+                    <p class="text-gray-600 mb-3">The <code>&lt;p&gt;</code> element defines a paragraph:</p>
+                    <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                        <p>This is a paragraph of text. HTML paragraphs are defined with the p tag.</p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Links</h3>
+                    <p class="text-gray-600 mb-3">The <code>&lt;a&gt;</code> element defines a hyperlink:</p>
+                    <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                        <a href="#" class="text-blue-500 hover:text-blue-700">This is a link</a>
+                    </div>
+                    <p class="text-gray-600 mt-2">HTML code: <code>&lt;a href="url"&gt;link text&lt;/a&gt;</code></p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Images</h3>
+                    <p class="text-gray-600 mb-3">The <code>&lt;img&gt;</code> element is used to embed images:</p>
+                    <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                        <p>HTML code: <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code></p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Lists</h3>
+                    <p class="text-gray-600 mb-3">HTML supports ordered lists <code>&lt;ol&gt;</code> and unordered lists <code>&lt;ul&gt;</code>:</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                            <p class="font-bold mb-2">Unordered List:</p>
+                            <ul class="list-disc pl-5">
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                            <p class="font-bold mb-2">Ordered List:</p>
+                            <ol class="list-decimal pl-5">
+                                <li>First item</li>
+                                <li>Second item</li>
+                                <li>Third item</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself!</h2>
+                <p class="text-gray-600 mb-4">Open this file (html-basics.html) in your code editor and try these challenges:</p>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Challenge 1:</h3>
+                    <p class="text-gray-600">Add a new section below with a heading "My HTML Practice" and write a paragraph about what you've learned.</p>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Challenge 2:</h3>
+                    <p class="text-gray-600">Create a table with 3 columns and 3 rows about your favorite books or movies. Research how to create HTML tables!</p>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Challenge 3:</h3>
+                    <p class="text-gray-600">Add an image to the page. You can use a URL to an online image or add an image to the img folder.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="tailwind-basics.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-block">Next: Learn Tailwind CSS →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-center">Created to help beginners learn web development. Explore, modify, and have fun!</p>
+            <p class="text-center mt-2">Open the files in your code editor and try changing things to see what happens.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

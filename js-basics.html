@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics - WebDevBasics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">WebDevBasics</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+                <li><a href="html-basics.html" class="hover:text-indigo-600">HTML</a></li>
+                <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
+                <li><a href="js-basics.html" class="text-indigo-600 hover:text-indigo-800">JavaScript</a></li>
+                <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">JavaScript Basics</h1>
+            <p class="text-lg text-gray-600 mb-8 text-center">JavaScript is a programming language that adds interactivity to your website.</p>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">What is JavaScript?</h2>
+                <p class="text-gray-600 mb-4">JavaScript is a versatile programming language primarily used for web development. It allows you to:</p>
+                <ul class="list-disc pl-5 text-gray-600 mb-4">
+                    <li>Make your website interactive</li>
+                    <li>Update content dynamically</li>
+                    <li>Control multimedia</li>
+                    <li>Animate elements</li>
+                    <li>Fetch data from servers</li>
+                    <li>And much more!</li>
+                </ul>
+                <p class="text-gray-600">JavaScript works alongside HTML (structure) and CSS (styling) to create complete web experiences.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">JavaScript Fundamentals</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Variables</h3>
+                    <p class="text-gray-600 mb-3">Variables are containers for storing data values:</p>
+
+                    <div class="bg-gray-100 p-4 rounded-md mb-4 overflow-x-auto">
+                        <pre class="text-sm"><code>// Using let (recommended for variables that can change)
+let name = "John";
+let age = 25;
+let isStudent = true;
+
+// Using const (for values that won't change)
+const PI = 3.14159;
+
+// Older way using var (not recommended for new code)
+var country = "USA";</code></pre>
+                    </div>
+
+                    <button id="try-variables" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
+                    <div id="variables-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Data Types</h3>
+                    <p class="text-gray-600 mb-3">JavaScript has several basic data types:</p>
+
+                    <div class="bg-gray-100 p-4 rounded-md mb-4 overflow-x-auto">
+                        <pre class="text-sm"><code>// String - text
+let greeting = "Hello, World!";
+
+// Number - integers and decimals
+let count = 42;
+let price = 19.99;
+
+// Boolean - true/false
+let isAvailable = true;
+
+// Array - collection of items
+let colors = ["red", "green", "blue"];
+
+// Object - container for properties
+let person = {
+  firstName: "Jane",
+  lastName: "Doe",
+  age: 30
+};</code></pre>
+                    </div>
+
+                    <button id="try-datatypes" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
+                    <div id="datatypes-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Functions</h3>
+                    <p class="text-gray-600 mb-3">Functions are blocks of code designed to perform a particular task:</p>
+
+                    <div class="bg-gray-100 p-4 rounded-md mb-4 overflow-x-auto">
+                        <pre class="text-sm"><code>// Function declaration
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+// Arrow function (modern way)
+const add = (a, b) => {
+  return a + b;
+};
+
+// Function expression
+const multiply = function(x, y) {
+  return x * y;
+};</code></pre>
+                    </div>
+
+                    <button id="try-functions" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
+                    <div id="functions-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Control Flow</h3>
+                    <p class="text-gray-600 mb-3">Control flow statements let your code make decisions:</p>
+
+                    <div class="bg-gray-100 p-4 rounded-md mb-4 overflow-x-auto">
+                        <pre class="text-sm"><code>// If statements
+let temperature = 22;
+
+if (temperature > 30) {
+  console.log("It's hot outside!");
+} else if (temperature > 20) {
+  console.log("It's a nice day!");
+} else {
+  console.log("It's cold outside!");
+}
+
+// Loops
+// For loop
+for (let i = 0; i < 3; i++) {
+  console.log("Loop iteration: " + i);
+}
+
+// While loop
+let count = 0;
+while (count < 3) {
+  console.log("While count: " + count);
+  count++;
+}</code></pre>
+                    </div>
+
+                    <button id="try-control" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors">Run Example</button>
+                    <div id="control-output" class="bg-gray-800 text-green-400 p-4 rounded-md mt-2 font-mono hidden"></div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">DOM Manipulation</h2>
+                <p class="text-gray-600 mb-4">One of the most powerful features of JavaScript is its ability to manipulate the DOM (Document Object Model):</p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6 overflow-x-auto">
+                    <pre class="text-sm"><code>// Selecting elements
+const heading = document.getElementById('main-heading');
+const paragraphs = document.querySelectorAll('p');
+
+// Changing content
+heading.textContent = 'New Heading';
+heading.innerHTML = '&lt;span&gt;New&lt;/span&gt; Heading';
+
+// Changing styles
+heading.style.color = 'blue';
+heading.classList.add('highlighted');
+
+// Creating new elements
+const newElement = document.createElement('div');
+newElement.textContent = 'I was created with JavaScript!';
+document.body.appendChild(newElement);</code></pre>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Live Example</h3>
+                    <p class="text-gray-600 mb-3">Click the buttons below to see DOM manipulation in action:</p>
+
+                    <div class="p-6 border border-gray-300 rounded-md mb-4">
+                        <h3 id="demo-heading" class="text-xl font-bold mb-2">This heading will change</h3>
+                        <p id="demo-paragraph">This paragraph can be modified with JavaScript.</p>
+                        <div id="demo-container" class="mt-4"></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <button id="change-text" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors">Change Text</button>
+                        <button id="change-color" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors">Change Color</button>
+                        <button id="add-element" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">Add Element</button>
+                        <button id="reset-demo" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Try It Yourself!</h2>
+                <p class="text-gray-600 mb-4">Open this file (js-basics.html) and the corresponding JavaScript file (js/script.js) in your code editor and try these challenges:</p>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Challenge 1:</h3>
+                    <p class="text-gray-600">Create a simple counter that increments when a button is clicked.</p>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Challenge 2:</h3>
+                    <p class="text-gray-600">Build a form that validates input before submission (e.g., check if fields are empty).</p>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Challenge 3:</h3>
+                    <p class="text-gray-600">Create a color picker that changes the background color of an element.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="project.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-block">Next: Mini Project →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-center">Created to help beginners learn web development. Explore, modify, and have fun!</p>
+            <p class="text-center mt-2">Open the files in your code editor and try changing things to see what happens.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

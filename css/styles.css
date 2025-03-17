@@ -1,0 +1,49 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Code snippets */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Add smooth transitions */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+/* Focus styles for accessibility */
+a:focus, button:focus, input:focus {
+  outline: 2px solid rgba(99, 102, 241, 0.5);
+  outline-offset: 2px;
+}
+
+/* Animation for hover effects */
+.hover\:scale-105:hover {
+  transition: transform 0.2s ease;
+}
+
+/* Highlight text selection */
+::selection {
+  background-color: rgba(99, 102, 241, 0.2);
+}

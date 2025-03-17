@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Basics - Learn HTML, Tailwind CSS & JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-100 to-purple-100 min-h-screen">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-indigo-600">WebDevBasics</div>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-indigo-600 hover:text-indigo-800">Home</a></li>
+                <li><a href="html-basics.html" class="hover:text-indigo-600">HTML</a></li>
+                <li><a href="tailwind-basics.html" class="hover:text-indigo-600">Tailwind CSS</a></li>
+                <li><a href="js-basics.html" class="hover:text-indigo-600">JavaScript</a></li>
+                <li><a href="project.html" class="hover:text-indigo-600">Mini Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Learn Web Development</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">A hands-on introduction to HTML, Tailwind CSS, and JavaScript for beginners.</p>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-8 mb-16">
+            <!-- HTML Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105">
+                <div class="bg-red-500 h-2"></div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-gray-800">HTML</h2>
+                    <p class="text-gray-600 mb-4">Learn the building blocks of web pages and document structure.</p>
+                    <a href="html-basics.html" class="text-red-500 hover:text-red-700 font-medium">Start learning →</a>
+                </div>
+            </div>
+
+            <!-- Tailwind Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105">
+                <div class="bg-blue-500 h-2"></div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-gray-800">Tailwind CSS</h2>
+                    <p class="text-gray-600 mb-4">Style your websites with a utility-first CSS framework.</p>
+                    <a href="tailwind-basics.html" class="text-blue-500 hover:text-blue-700 font-medium">Start learning →</a>
+                </div>
+            </div>
+
+            <!-- JavaScript Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105">
+                <div class="bg-yellow-500 h-2"></div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-gray-800">JavaScript</h2>
+                    <p class="text-gray-600 mb-4">Add interactivity and dynamic behavior to your web pages.</p>
+                    <a href="js-basics.html" class="text-yellow-500 hover:text-yellow-700 font-medium">Start learning →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-lg shadow-lg mb-16">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">How to Use This Resource</h2>
+            <p class="text-gray-600 mb-4">This website is designed to be interactive. We encourage you to:</p>
+            <ul class="list-disc pl-5 text-gray-600 mb-4">
+                <li>Read through each section and try the examples</li>
+                <li>Open the source code and make changes to see what happens</li>
+                <li>Complete the challenges at the end of each section</li>
+                <li>Build the mini project to apply what you've learned</li>
+            </ul>
+            <p class="text-gray-600">Remember, the best way to learn is by doing. Don't be afraid to experiment!</p>
+        </section>
+
+        <section class="text-center">
+            <a href="html-basics.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-block">Start Your Journey</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-20">
+        <div class="container mx-auto px-6">
+            <p class="text-center">Created to help beginners learn web development. Explore, modify, and have fun!</p>
+            <p class="text-center mt-2">Open the files in your code editor and try changing things to see what happens.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
