@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;700&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles beyond Tailwind */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatingHearts {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .heartbeat {
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .fadeInUp {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .floating-heart {
+            position: fixed;
+            color: rgba(220, 38, 38, 0.7);
+            font-size: 1.5rem;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .parisienne {
+            font-family: 'Parisienne', cursive;
+        }
+
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gallery-container {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .gallery-item {
+            scroll-snap-align: center;
+        }
+
+        /* Custom gradient background */
+        .love-gradient {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+        }
+
+        /* Parallax effect */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Glitter overlay */
+        .glitter {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmY5Ij48L3JlY3Q+Cjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-pink-50 overflow-x-hidden">
+    <!-- Floating hearts animation -->
+    <div id="floating-hearts"></div>
+
+    <!-- Header with parallax effect -->
+    <header class="relative h-screen flex items-center justify-center parallax love-gradient overflow-hidden">
+        <div class="absolute inset-0 glitter"></div>
+        <div class="text-center px-4 py-20 z-10 fadeInUp">
+            <h1 class="parisienne text-6xl md:text-8xl text-white mb-6 tracking-wider drop-shadow-lg">My Dearest Love</h1>
+            <p class="dancing-script text-2xl md:text-3xl text-white mb-8">Every moment with you feels like a dream...</p>
+            <div class="heartbeat inline-block">
+                <i class="fas fa-heart text-5xl text-white"></i>
+            </div>
+            <div class="mt-12">
+                <button id="continue-btn" class="montserrat bg-white text-pink-500 px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-pink-100">
+                    Begin Our Journey
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+        <h2 class="parisienne text-5xl text-center text-pink-600 mb-16">Our Beautiful Story</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="fadeInUp" data-delay="0.3s">
+                <h3 class="dancing-script text-3xl text-pink-500 mb-4">From the moment we met...</h3>
+                <p class="montserrat text-gray-700 leading-relaxed">
+                    I knew there was something special about you. The way your eyes lit up when you smiled,
+                    how your laughter filled the room with joy. Every day with you has been a gift, a beautiful
+                    chapter in our love story that I cherish with all my heart.
+                </p>
+                <p class="montserrat text-gray-700 leading-relaxed mt-4">
+                    You've shown me what it means to truly love and be loved in return. Your kindness,
+                    your strength, your beautiful soul - everything about you captivates me in ways
+                    I never thought possible.
+                </p>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow-2xl h-80 bg-gradient-to-r from-pink-300 to-purple-300 flex items-center justify-center">
+                <p class="dancing-script text-white text-2xl px-6 text-center">Imagine our favorite photo here</p>
+                <span class="absolute bottom-2 right-2 text-white text-xs">Our first date</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Gallery -->
+    <section class="py-20 bg-pink-100 px-4">
+        <h2 class="parisienne text-5xl text-center text-pink-600 mb-12">Our Precious Memories</h2>
+        <div class="relative max-w-5xl mx-auto">
+            <div class="gallery-container flex overflow-x-auto pb-8 hide-scrollbar">
+                <div class="gallery-item flex-shrink-0 w-80 h-60 mx-4 rounded-lg bg-white shadow-lg overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-red-200 to-pink-200">
+                        <p class="dancing-script text-pink-600 text-xl px-4 text-center">Our trip to the beach</p>
+                    </div>
+                </div>
+                <div class="gallery-item flex-shrink-0 w-80 h-60 mx-4 rounded-lg bg-white shadow-lg overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-200 to-pink-200">
+                        <p class="dancing-script text-pink-600 text-xl px-4 text-center">Our first dinner date</p>
+                    </div>
+                </div>
+                <div class="gallery-item flex-shrink-0 w-80 h-60 mx-4 rounded-lg bg-white shadow-lg overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-pink-200 to-orange-200">
+                        <p class="dancing-script text-pink-600 text-xl px-4 text-center">Celebrating your birthday</p>
+                    </div>
+                </div>
+                <div class="gallery-item flex-shrink-0 w-80 h-60 mx-4 rounded-lg bg-white shadow-lg overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-200 to-pink-200">
+                        <p class="dancing-script text-pink-600 text-xl px-4 text-center">Our weekend getaway</p>
+                    </div>
+                </div>
+                <div class="gallery-item flex-shrink-0 w-80 h-60 mx-4 rounded-lg bg-white shadow-lg overflow-hidden">
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-200 to-pink-200">
+                        <p class="dancing-script text-pink-600 text-xl px-4 text-center">Dancing in the rain</p>
+                    </div>
+                </div>
+            </div>
+            <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-r-lg shadow hover:bg-white">
+                <i class="fas fa-chevron-left text-pink-500"></i>
+            </button>
+            <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-l-lg shadow hover:bg-white">
+                <i class="fas fa-chevron-right text-pink-500"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Why I Love You Section -->
+    <section id="reasons" class="py-20 px-4 max-w-4xl mx-auto">
+        <h2 class="parisienne text-5xl text-center text-pink-600 mb-16">Why I Love You</h2>
+        <div id="reasons-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Reasons will be added dynamically -->
+        </div>
+        <div class="text-center mt-12">
+            <button id="more-reasons-btn" class="montserrat inline-flex items-center bg-pink-500 text-white px-6 py-3 rounded-full shadow hover:bg-pink-600 transition-colors">
+                <span>Show me more</span>
+                <i class="fas fa-heart ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Special Moments Counter -->
+    <section class="py-16 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
+        <div class="max-w-5xl mx-auto text-center px-4">
+            <h2 class="parisienne text-4xl mb-12">Our Journey Together</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="counter-box">
+                    <div class="text-5xl font-bold mb-2" id="days-counter">0</div>
+                    <div class="montserrat text-sm uppercase tracking-wider">Days Together</div>
+                </div>
+                <div class="counter-box">
+                    <div class="text-5xl font-bold mb-2" id="adventures-counter">0</div>
+                    <div class="montserrat text-sm uppercase tracking-wider">Adventures</div>
+                </div>
+                <div class="counter-box">
+                    <div class="text-5xl font-bold mb-2" id="kisses-counter">0</div>
+                    <div class="montserrat text-sm uppercase tracking-wider">Kisses</div>
+                </div>
+                <div class="counter-box">
+                    <div class="text-5xl font-bold mb-2" id="memories-counter">0</div>
+                    <div class="montserrat text-sm uppercase tracking-wider">Memories Made</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message From My Heart -->
+    <section class="py-20 px-4 max-w-4xl mx-auto text-center" id="message">
+        <h2 class="parisienne text-5xl text-pink-600 mb-12">A Message From My Heart</h2>
+        <div class="bg-white p-8 rounded-lg shadow-lg relative">
+            <i class="fas fa-quote-left text-pink-200 text-4xl absolute top-4 left-4"></i>
+            <p class="dancing-script text-2xl text-gray-700 mb-8 mt-6 px-8">
+                Every day with you is a beautiful adventure. Your smile brightens my darkest days,
+                your touch calms my restless heart. You are my confidant, my best friend, my
+                soulmate. When I look into your eyes, I see my future, my dreams, my forever.
+            </p>
+            <p class="dancing-script text-2xl text-gray-700 mb-8 px-8">
+                In your arms, I've found my home. In your heart, I've found my peace.
+                With you, I am the best version of myself, and I fall in love with you more
+                with each passing day.
+            </p>
+            <i class="fas fa-quote-right text-pink-200 text-4xl absolute bottom-4 right-4"></i>
+        </div>
+    </section>
+
+    <!-- Proposal Section -->
+    <section id="proposal" class="min-h-screen flex items-center justify-center relative love-gradient py-20 px-4">
+        <div class="absolute inset-0 glitter"></div>
+        <div class="text-center max-w-3xl mx-auto z-10">
+            <h2 class="parisienne text-6xl text-white mb-12 drop-shadow-lg">My Dearest Love...</h2>
+            <div id="proposal-text" class="dancing-script text-3xl text-white mb-12 leading-relaxed opacity-0">
+                You are the love of my life, the keeper of my heart, the one who makes me smile when I wake up
+                and the last thought in my mind before I fall asleep. You've brought colors to my world I never
+                knew existed.
+                <br><br>
+                Every moment with you is precious, and I want nothing more than to create countless more memories
+                together. You're my best friend, my confidant, my soulmate.
+                <br><br>
+                <span class="text-4xl font-bold">Will you continue this beautiful journey with me?</span>
+            </div>
+            <div id="proposal-buttons" class="flex flex-col md:flex-row justify-center gap-6 mt-8 opacity-0">
+                <button id="yes-btn" class="py-4 px-12 bg-white text-pink-600 rounded-full text-xl montserrat font-bold hover:bg-pink-100 transition-colors shadow-lg">
+                    Yes, Forever & Always! ❤️
+                </button>
+                <button id="no-btn" class="py-4 px-12 bg-transparent border-2 border-white text-white rounded-full text-xl montserrat hover:bg-white/10 transition-colors">
+                    Let me think...
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Section (Hidden initially) -->
+    <section id="response" class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black/70">
+        <div class="bg-white rounded-lg max-w-2xl mx-4 p-8 text-center">
+            <h2 class="parisienne text-5xl text-pink-600 mb-6">Thank You, My Love!</h2>
+            <p class="dancing-script text-2xl text-gray-700 mb-8">
+                You've made me the happiest person alive! I promise to cherish, love and adore you every day.
+                Our story is just beginning, and I can't wait to write every chapter with you.
+            </p>
+            <p class="montserrat text-lg text-gray-600 mb-8">
+                This is the start of our forever. I love you more than words can express.
+            </p>
+            <div>
+                <button id="celebrate-btn" class="bg-pink-500 text-white px-8 py-3 rounded-full montserrat hover:bg-pink-600 transition-colors">
+                    Let's Celebrate Our Love
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confetti celebration (hidden initially) -->
+    <div id="confetti" class="hidden fixed inset-0 z-40 pointer-events-none"></div>
+
+    <!-- Teasing Section (appears with no button) -->
+    <section id="teasing" class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black/70">
+        <div class="bg-white rounded-lg max-w-2xl mx-4 p-8 text-center">
+            <i class="fas fa-heart-broken text-pink-500 text-6xl mb-6"></i>
+            <h2 class="parisienne text-4xl text-pink-600 mb-6">Are You Sure?</h2>
+            <p class="dancing-script text-2xl text-gray-700 mb-8">
+                I think you accidentally clicked the wrong button! Let me give you another chance...
+            </p>
+            <div class="flex justify-center">
+                <button id="return-btn" class="bg-pink-500 text-white px-8 py-3 rounded-full montserrat hover:bg-pink-600 transition-colors">
+                    Take Me Back
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create floating hearts
+            function createFloatingHearts() {
+                const container = document.getElementById('floating-hearts');
+                const heartCount = 20;
+
+                for (let i = 0; i < heartCount; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.className = 'floating-heart';
+                        heart.innerHTML = '<i class="fas fa-heart"></i>';
+
+                        // Random position
+                        const left = Math.random() * 100;
+                        heart.style.left = `${left}vw`;
+                        heart.style.bottom = '-20px';
+
+                        // Random size
+                        const size = Math.random() * 1.5 + 0.5;
+                        heart.style.fontSize = `${size}rem`;
+
+                        // Random duration
+                        const duration = Math.random() * 15 + 10;
+                        heart.style.animation = `floatingHearts ${duration}s linear infinite`;
+
+                        // Random delay
+                        heart.style.animationDelay = `${Math.random() * 10}s`;
+
+                        container.appendChild(heart);
+                    }, i * 300);
+                }
+            }
+
+            createFloatingHearts();
+
+            // Smooth scroll for navigation
+            document.getElementById('continue-btn').addEventListener('click', function() {
+                document.getElementById('our-story').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Gallery navigation
+            const gallery = document.querySelector('.gallery-container');
+            document.getElementById('next-btn').addEventListener('click', function() {
+                gallery.scrollBy({ left: 320, behavior: 'smooth' });
+            });
+
+            document.getElementById('prev-btn').addEventListener('click', function() {
+                gallery.scrollBy({ left: -320, behavior: 'smooth' });
+            });
+
+            // Reasons why I love you
+            const reasons = [
+                "Your beautiful smile that lights up my day",
+                "The way you laugh at my terrible jokes",
+                "How you always know what to say when I'm down",
+                "Your compassion for others",
+                "The cute way you scrunch your nose when you're thinking",
+                "Your incredible strength and resilience",
+                "How you make even ordinary moments special",
+                "The way you dance when no one's watching",
+                "Your passion for the things you love",
+                "How you make me feel like the luckiest person alive",
+                "The way your eyes sparkle when you're excited",
+                "How you always believe in me, even when I don't",
+                "Your kindness that knows no bounds",
+                "The way you hold my hand just when I need it",
+                "How you remember the little things about me",
+                "Your incredible mind and creativity",
+                "The way you care for those you love",
+                "How you push me to be a better person",
+                "Your beautiful heart that loves so deeply",
+                "The way you fit perfectly in my arms"
+            ];
+
+            const reasonsContainer = document.getElementById('reasons-container');
+            let reasonsShown = 0;
+
+            function addReasons(count) {
+                for (let i = 0; i < count; i++) {
+                    if (reasonsShown >= reasons.length) break;
+
+                    const reason = document.createElement('div');
+                    reason.className = 'bg-white p-6 rounded-lg shadow-lg flex items-start fadeInUp';
+                    reason.style.animationDelay = `${i * 0.1}s`;
+
+                    reason.innerHTML = `
+                        <i class="fas fa-heart text-pink-500 mr-4 mt-1"></i>
+                        <p class="montserrat text-gray-700">${reasons[reasonsShown]}</p>
+                    `;
+
+                    reasonsContainer.appendChild(reason);
+                    reasonsShown++;
+                }
+
+                if (reasonsShown >= reasons.length) {
+                    document.getElementById('more-reasons-btn').style.display = 'none';
+                }
+            }
+
+            // Initially show 6 reasons
+            addReasons(6);
+
+            document.getElementById('more-reasons-btn').addEventListener('click', function() {
+                addReasons(4);
+            });
+
+            // Counters animation
+            function animateCounter(id, target, duration) {
+                const counter = document.getElementById(id);
+                let current = 0;
+                const increment = target / (duration / 16);
+
+                const timer = setInterval(() => {
+                    current += increment;
+
+                    if (current >= target) {
+                        clearInterval(timer);
+                        current = target;
+                    }
+
+                    counter.textContent = Math.floor(current).toLocaleString();
+                }, 16);
+            }
+
+            // Intersection Observer for counters
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter('days-counter', 365, 2000);
+                        animateCounter('adventures-counter', 52, 2000);
+                        animateCounter('kisses-counter', 9999, 3000);
+                        animateCounter('memories-counter', 1234, 2500);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(document.getElementById('days-counter'));
+
+            // Proposal section animations
+            const proposalObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            document.getElementById('proposal-text').style.opacity = '1';
+                            document.getElementById('proposal-text').style.transition = 'opacity 1.5s ease';
+                        }, 500);
+
+                        setTimeout(() => {
+                            document.getElementById('proposal-buttons').style.opacity = '1';
+                            document.getElementById('proposal-buttons').style.transition = 'opacity 1s ease';
+                        }, 4000);
+
+                        proposalObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.7 });
+
+            proposalObserver.observe(document.getElementById('proposal'));
+
+            // Button responses
+            document.getElementById('yes-btn').addEventListener('click', function() {
+                document.getElementById('response').classList.remove('hidden');
+                createConfetti();
+            });
+
+            document.getElementById('no-btn').addEventListener('click', function() {
+                document.getElementById('teasing').classList.remove('hidden');
+                // Make button run away when hovered
+                this.classList.add('hover:translate-x-12', 'transition-transform');
+            });
+
+            document.getElementById('return-btn').addEventListener('click', function() {
+                document.getElementById('teasing').classList.add('hidden');
+            });
+
+            document.getElementById('celebrate-btn').addEventListener('click', function() {
+                document.getElementById('response').classList.add('hidden');
+                document.getElementById('confetti').classList.remove('hidden');
+
+                // Go back to top with a celebration
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // Extra hearts animation
+                createExtraHearts();
+            });
+
+            // Create confetti
+            function createConfetti() {
+                const confettiContainer = document.getElementById('confetti');
+                const colors = ['#ff758c', '#ff7eb3', '#ffa7c4', '#f2d4d7', '#ffffff'];
+
+                for (let i = 0; i < 150; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'absolute';
+                    confetti.style.width = `${Math.random() * 10 + 5}px`;
+                    confetti.style.height = `${Math.random() * 5 + 5}px`;
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = `${Math.random() * 100}vw`;
+                    confetti.style.top = '-10px';
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+
+                    const duration = Math.random() * 3 + 2;
+                    const delay = Math.random() * 5;
+
+                    confetti.style.animation = `
+                        fadeInUp ${duration}s ease-in ${delay}s forwards
+                    `;
+
+                    confettiContainer.appendChild(confetti);
+                }
+            }
+
+            // Extra heart animation for grand finale
+            function createExtraHearts() {
+                const heartCount = 50;
+                const container = document.body;
+
+                for (let i = 0; i < heartCount; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.className = 'fixed text-red-500 z-50';
+                        heart.style.pointerEvents = 'none';
+                        heart.innerHTML = '<i class="fas fa-heart"></i>';
+
+                        // Random position
+                        const left = Math.random() * 100;
+                        const top = Math.random() * 100;
+                        heart.style.left = `${left}vw`;
+                        heart.style.top = `${top}vh`;
+
+                        // Random size
+                        const size = Math.random() * 3 + 1;
+                        heart.style.fontSize = `${size}rem`;
+
+                        // Random animation
+                        const duration = Math.random() * 2 + 1;
+                        heart.style.transition = `all ${duration}s ease-out`;
+
+                        container.appendChild(heart);
+
+                        // Animate out
+                        setTimeout(() => {
+                            heart.style.transform = `translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(0)`;
+                            heart.style.opacity = '0';
+
+                            // Remove after animation
+                            setTimeout(() => {
+                                heart.remove();
+                            }, duration * 1000);
+                        }, 100);
+                    }, i * 100);
+                }
+            }
+
+            // Fade in animations for sections
+            const fadeElements = document.querySelectorAll('.fadeInUp');
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const delay = el.getAttribute('data-delay') || '0s';
+                        el.style.animationDelay = delay;
+                        el.style.opacity = '1';
+                        fadeObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                fadeObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
